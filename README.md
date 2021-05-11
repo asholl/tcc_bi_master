@@ -1,13 +1,37 @@
-# tcc_bi_master
+<!-- antes de enviar a versão final, solicitamos que todos os comentários, colocados para orientação ao aluno, sejam removidos do arquivo -->
 
-As etapas de coleta de dados (que compreende o download de arquivos CSV e web scraping dos sites da B3 e CVM), de tratamento dos dados coletados e da criação do banco de dados em SQLite foram realizadas através de um jupyter notebook em python 3. Foram utilizadas as seguintes bibliotecas: numpy, time, datetime, pandas, string, wget, zipfile, random, sqlite3 e selenium.
+# Dashboard para Cotações Históricas das Empresas Listadas na B3
 
-A CVM disponibiliza diversos formulários de demonstrações financeiras desde o ano de 2011 no site http://dados.cvm.gov.br. A etapa de coleta de dados no site da CVM consiste em fazer o download dos arquivos e concatená-los para posterior ingestão no banco de dados.
+#### Aluno: [André de Araujo Sholl](https://github.com/asholl/tcc_bi_master).
+#### Orientador: [Anderson Nascimento](https://github.com/insightds).
 
-A B3 também disponibiliza informações no site www.b3.com.br. As séries históricas são disponibilizadas em arquivos CSV em séries anuais, mensais ou diárias. Estes arquivos estão formatados por largura de coluna de forma que há necessidade de ajustar estes arquivos conforme layout disponível no site da B3. Após este pré-processamento os arquivos são concatenados para posterior importação no banco de dados. Por outro lado, dados básicos das empresas listadas na B3 não estão disponíveis através de arquivos CSV. Assim, é necessário empregar a técnica de web scraping para extrair informações básicas das empresas (código CVM, CNPJ, razão social, site, código de negociação etc). O site da B3 emprega muito a linguagem javascript e iframes dentro de iframes de forma que a extração destas informações não é uma tarefa trivial. Felizmente, o pyhton possui a biblioteca selenium que permite renderizar em um browser, simulando a navegação realizada por um ser humano, ao mesmo tempo que coleta as informações. Todas estas informações foram salvas num arquivo CSV.
+---
 
-Após a coleta e tratamentos dos dados, os arquivos CSVs criados foram importados em um banco de dados SQLite.
+Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como pré-requisito para conclusão de curso e obtenção de crédito na disciplina "Projetos de Sistemas Inteligentes de Apoio à Decisão".
 
-Com o banco de dados criado, a última etapa é criar uma conexão entre o banco de dados e o Power Bi. O Power BI não suporta nativamente o banco de dados SQLite. Para que seja possível a conexão, é preciso baixar um drive ODBC para SQLite no site http://www.ch-werner.de/sqliteodbc/. 
+- [Link para o código](https://github.com/asholl/tcc_bi_master/blob/main/TCC.ipynb). <!-- caso não aplicável, remover esta linha -->
 
-Para criar a conexão ao banco de dados, é preciso criar uma conexão ODBC no PowerBI, escolher SQLite no menu, informar o local do banco de dados e escolher as tabelas que serão importadas. Após a importação, são necessários alguns passos: ajustar o tipo de dados para as colunas de datas e código CVM e definir os relacionamentos.
+- [Link para o artigo](https://github.com/asholl/tcc_bi_master/blob/main/Trabalho%20de%20Conclus%C3%A3o%20de%20Curso%20Final.pdf). <!-- caso não aplicável, remover esta linha -->
+
+- [Link para o dashboard](https://github.com/asholl/tcc_bi_master/blob/main/Dashboard/A%C3%A7%C3%B5es%20B3%20-%20Cota%C3%A7%C3%B5es%20Hist%C3%B3ricas.pbix). <!-- caso não aplicável, remover esta linha -->
+---
+
+### Resumo
+
+<!-- trocar o texto abaixo pelo resumo do trabalho, em português -->
+
+Este artigo descreve as etapas de coleta de dados (que compreende o download de arquivos CSV e web scraping dos sites da B3 e CVM), de tratamento dos dados coletados, da criação do banco de dados em SQLite, importação dos dados e visualização gráfica em dashboard dinâmico.
+
+### Abstract <!-- Opcional! Caso não aplicável, remover esta seção -->
+
+<!-- trocar o texto abaixo pelo resumo do trabalho, em inglês -->
+
+This article describes the steps of data collection (which includes downloading CSV files and web scraping from B3 and CVM sites), processing the collected data, creating the database in SQLite, importing the data and graphical visualization in dynamic dashboard.
+
+---
+
+Matrícula: 191.671.007
+
+Pontifícia Universidade Católica do Rio de Janeiro
+
+Curso de Pós Graduação *Business Intelligence Master*
