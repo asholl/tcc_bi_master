@@ -9,7 +9,7 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 - [Link para o código](https://github.com/asholl/tcc_bi_master/blob/main/TCC.ipynb). 
 
-- [Link para o artigo](https://github.com/asholl/tcc_bi_master/blob/main/Trabalho%20de%20Conclus%C3%A3o%20de%20Curso%20Final.pdf). 
+- [Link para o artigo](https://github.com/asholl/tcc_bi_master/blob/main/Trabalho_Conclusao_Curso.pdf). 
 
 - [Link para o dashboard](https://github.com/asholl/tcc_bi_master/blob/main/Dashboard/A%C3%A7%C3%B5es%20B3%20-%20Cota%C3%A7%C3%B5es%20Hist%C3%B3ricas.pbix). 
 
